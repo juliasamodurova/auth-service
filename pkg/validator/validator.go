@@ -51,7 +51,7 @@ func validateTag(fl validator.FieldLevel) bool {
 }
 
 // основная функция валидации: принимает контекст и структуру для валидации,
-// возвращает ошибку если валидация не прошла
+// возвращает ошибку, если валидация не прошла
 func Validate(ctx context.Context, structure any) error {
 	return parseValidationErrors(Validator().StructCtx(ctx, structure))
 }
